@@ -1,0 +1,637 @@
+/* ========================================
+   PORSCHE CLONE - Professional Stylesheet
+   ======================================== */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #fff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* --- Porsche Font --- */
+#porcheyazıtipi {
+    font-family: '911 Porscha', sans-serif;
+    letter-spacing: 6px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    transition: opacity 0.3s ease;
+}
+
+/* --- Navbar --- */
+#navbar {
+    position: relative;
+    z-index: 1050;
+    transition: all 0.4s ease;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+header.scrolled #porcheyazıtipi,
+header.scrolled #menuu a,
+header.scrolled #telephonee i {
+    color: #fff !important;
+}
+
+header.scrolled #menuu a:hover {
+    color: #d5001c !important;
+}
+
+/* Navbar boşluk — header fixed olduğu için */
+body {
+    padding-top: 70px;
+}
+
+/* Menu Button */
+#menuu a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    border: none;
+}
+
+#menuu a:hover {
+    color: #d5001c;
+}
+
+#menuu a i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Phone icon */
+#telephonee i {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#telephonee i:hover {
+    color: #d5001c;
+}
+
+/* --- Offcanvas Menu --- */
+.offcanvas {
+    background: #1a1a1a !important;
+    color: #fff;
+    max-width: 400px;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 2rem;
+}
+
+.offcanvas-title {
+    font-family: '911 Porscha', sans-serif;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.offcanvas .btn-close {
+    filter: invert(1);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.offcanvas .btn-close:hover {
+    opacity: 1;
+}
+
+.offcanvas-body {
+    padding: 1.5rem 2rem;
+}
+
+.offcanvas-body p {
+    margin-bottom: 0;
+}
+
+.offcanvas-body .menu-item {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.offcanvas-body .menu-item:hover {
+    padding-left: 12px;
+    border-bottom-color: #d5001c;
+}
+
+.offcanvas-body .menu-item .h4 {
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.offcanvas-body .menu-item:hover .h4 {
+    color: #d5001c !important;
+}
+
+.offcanvas-body .menu-item .menu-arrow {
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    float: right;
+}
+
+.offcanvas-body .menu-item:hover .menu-arrow {
+    color: #d5001c;
+    transform: translateX(4px);
+}
+
+/* --- Carousel --- */
+.carousel {
+    margin-top: -70px;
+    /* header altına girsin */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: filter 0.6s ease;
+}
+
+.carousel-item.active img {
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 15%;
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-family: '911 Porscha', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.carousel-caption p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    animation: fadeInUp 0.8s 0.2s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    width: 60px;
+    opacity: 1;
+}
+
+/* --- Models Section --- */
+article.container h3 {
+    font-family: '911 Porscha', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+article.container .text-center {
+    text-align: center !important;
+}
+
+article.container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #d5001c;
+}
+
+/* --- Model Cards --- */
+.card-porsche {
+    font-family: '911 Porscha', sans-serif;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-porsche .card-img {
+    height: 480px;
+    object-fit: cover;
+    /* Scale up to allow moving vertically without gaps */
+    transform: scale(1.2) translateY(-8%);
+    transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.card-porsche:hover .card-img {
+    /* Maintain lift on hover, slight zoom */
+    transform: scale(1.25) translateY(-8%);
+    filter: brightness(0.65);
+}
+
+/* Remove per-card object-position as we are using transform now */
+.card-porsche .card-img[alt*="Taycan"] {
+    transform: scale(1.2) translateY(-12%);
+}
+
+.card-porsche .card-img[alt*="911"] {
+    transform: scale(1.2) translateY(-5%);
+}
+
+.card-porsche .card-img[alt*="Macan"] {
+    transform: scale(1.2) translateY(-10%);
+}
+
+.card-porsche .card-img[alt*="Panamera"] {
+    transform: scale(1.2) translateY(-8%);
+}
+
+.card-porsche .card-img-overlay {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            rgba(0, 0, 0, 0) 65%);
+    transition: background 0.5s ease;
+    padding: 1rem 1.5rem;
+}
+
+.card-porsche:hover .card-img-overlay {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.25) 45%,
+            rgba(0, 0, 0, 0.05) 70%);
+}
+
+.card-porsche .card-title {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    transition: transform 0.4s ease;
+}
+
+.card-porsche:hover .card-title {
+    transform: translateY(-5px);
+}
+
+.card-porsche .card-text {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    transition: opacity 0.4s ease;
+}
+
+.card-porsche:hover .card-text {
+    opacity: 1;
+}
+
+/* Card Buttons */
+.card-porsche .btn-light {
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 0.65rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-porsche .btn-light:hover {
+    background: #d5001c;
+    border-color: #d5001c;
+    color: #fff;
+}
+
+.card-porsche .btn-outline-light {
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 0.65rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-porsche .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+/* --- Footer Links Section --- */
+.footer-links {
+    padding: 3rem 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer-links b {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-links p {
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links p:hover {
+    color: #d5001c;
+}
+
+/* --- Dark Footer --- */
+.footer-dark {
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 3rem 0 1rem;
+}
+
+.footer-dark h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.footer-dark .btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-dark .btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-dark p {
+    font-size: 0.78rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-dark .copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Icon Bar --- */
+.icon-bar {
+    background: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.75rem 0;
+}
+
+.icon-bar a {
+    color: #666;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bar a:hover {
+    color: #d5001c;
+    transform: translateY(-2px);
+}
+
+/* --- Scroll to Top Button --- */
+#sabitbuton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+#sabitbuton.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#sabitbuton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #d5001c;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(213, 0, 28, 0.4);
+    transition: all 0.3s ease;
+}
+
+#sabitbuton a:hover {
+    background: #b8001a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(213, 0, 28, 0.5);
+}
+
+#sabitbuton a i {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* --- Horizontal Rule --- */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent,
+            #ddd,
+            transparent);
+    opacity: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991.98px) {
+    .carousel-item img {
+        height: 60vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .card-porsche .card-img {
+        height: 320px;
+    }
+
+    #porcheyazıtipi {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .carousel {
+        margin-top: -60px;
+    }
+
+    .carousel-item img {
+        height: 50vh;
+    }
+
+    .carousel-caption {
+        bottom: 10%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .card-porsche .card-img {
+        height: 280px;
+    }
+
+    .card-porsche .card-title {
+        font-size: 1.5rem;
+    }
+
+    .footer-links .col-3,
+    .footer-links .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    #porcheyazıtipi {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+}
+
+/* --- Dropdown Arrow Fix --- */
+.dropdown-toggle::after {
+    margin-left: auto;
+}
+
+/* --- Selection Color --- */
+::selection {
+    background: #d5001c;
+    color: #fff;
+}
